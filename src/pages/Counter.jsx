@@ -1,11 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { UserContext } from '../components/UserDetails'
 
 export default function Counter() {
     const [count, setCount] = useState(0)
 
-    //   useEffect(() => {
-    //     alert("useeffect ran")
-    //   }, [])
+    const {setUser} = useContext(UserContext)
+
+
+
+      useEffect(() => {
+        setUser({
+            name: "Aditya",
+            email: "aditya@example.com"
+        })
+      }, [])
 
     function changeValue(value) {
         // this is right way
@@ -18,7 +26,7 @@ export default function Counter() {
     return (
         <div>
             <button onClick={() => changeValue(-1)}>-</button>
-            <span>{count}</span>
+            <span className="text-red-500">{count}</span>
             <button onClick={() => changeValue(1)}>+</button>
             {
                 count < 0 && (<span>Your counter is in negative</span>)
