@@ -11,6 +11,7 @@ export default function GuestLayout() {
                 <nav className='flex items-center gap-2'>
                     <Link to="/">Counter</Link>
                     <Link to="/about">About</Link>
+                    <Link to="/githubapp">Github App</Link>
                 </nav>
             </header>
             {/* static content */}

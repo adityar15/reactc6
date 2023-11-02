@@ -5,6 +5,7 @@ import About from './pages/About'
 import GuestLayout from './layouts/GuestLayout'
 import ContactDetails from "./pages/ContactDetails"
 import UserProvider from './components/UserDetails'
+import GithubApp from './pages/GithubApp'
 
 
 
@@ -17,6 +18,7 @@ export default function App() {
             <Route index element={<Counter />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/contact/:name" element={<ContactDetails />}></Route>
+            <Route path="/githubapp" element={<GithubApp />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
